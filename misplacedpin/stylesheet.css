@@ -15,6 +15,19 @@ body p {
   /*font-size: xx-large;*/
   font-size: 46px;
 }
+#score-board {
+  width: 800px;
+  position: relative;
+  background: DarkSeaGreen;
+  border: 3px solid black;
+  border-radius: 12px;
+  text-align: center;
+}
+#level {
+  color: black;
+  font-size: x-large;
+  font-weight: bold;
+}
 #board-container {
   width: 800px;
   height: 400px;
@@ -40,4 +53,8 @@ body p {
 #leftSide img, #rightSide img {
   position: absolute;
   cursor: pointer;
+}
+.wrapper {
+  width: 806px;
+  margin: 0 auto;
 }

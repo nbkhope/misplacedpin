@@ -1,7 +1,7 @@
 /**
- * Matching Game
+ * Misplaced Pin
  *
- * A simple matching game using random pinned images
+ * A simple spot-the-difference game using random pinned images
  *
  * Author: Renan Martins
  */
@@ -19,6 +19,8 @@ var pokemon = [
 
 // The initial number of pinned images
 var numberOfPins = 5;
+// To keep track of the game level
+var level = 1;
 
 // To reference the #leftSide and #rightSide divs
 var theLeftSide = document.getElementById("leftSide");
@@ -38,6 +40,8 @@ boardContainer.onclick = function gameOver() {
 };
 
 function generatePins() {
+  document.getElementById("level").innerHTML = "Level " + level; 
+
   for (var i = 1; i <= numberOfPins; i++) {
     var anImg = document.createElement("img");
 
@@ -81,7 +85,16 @@ function generatePins() {
 
     // Increases the number of pins
     // and generates the next level
-    numberOfPins += 5;
+    level++;
+
+    if (level % 3 == 0)
+      numberOfPins += 3;
+    else if (level % 7 == 0)
+      numberOfPins += 7;
+    else {
+      numberOfPins += 4;
+    }
+
     generatePins();
   };
 }
