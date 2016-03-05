@@ -2,12 +2,12 @@
  * Stylesheet for Misplaced Pin
  */
 
-body {
+html, body {
   background: AntiqueWhite;
 }
-body .game-title,
-body p {
-  font-family: "Monospace";
+.game-title, #level, p
+ {
+  font-family: "Courier New", Courier, monospace;
 }
 .game-title {
   color: DarkBlue;
