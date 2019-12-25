@@ -3,7 +3,7 @@
  *
  * A simple spot-the-difference game using random pinned images
  *
- * Author: Renan Martins
+ * Author: nbkhope
  */
 
 // Global variables for the width and height of the images
